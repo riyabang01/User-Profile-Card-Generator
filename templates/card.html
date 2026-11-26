@@ -1,0 +1,16 @@
+<div class="profile-card">
+    <div class="card-banner"></div>
+    <div class="avatar-wrapper">
+        <img 
+            class="avatar" 
+            src="{{ profile.image_url }}" 
+            alt="{{ profile.name }}"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2262%22 font-size=%2242%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>{{ profile.name[:1] | upper }}</text></svg>';">
+    </div>
+    <div class="card-body">
+        <h3>{{ profile.name }}</h3>
+        <span class="card-role">{{ profile.role }}</span>
+        <p class="card-bio">{{ profile.bio }}</p>
+        <div class="card-badge">Verified Profile</div>
+    </div>
+</div>
